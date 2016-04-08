@@ -17,7 +17,7 @@ store.dispatch(setUISignupVisibility(UISignupVisibilityFilter.SHOW));
 class App extends React.Component {
   render() {
     return(
-        <UsersStatsPageComponent/>
+        <UsersStatsPageComponent />
     );
   }
 }
