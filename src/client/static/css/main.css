@@ -1,0 +1,23 @@
+@media screen and (max-width: 375px) {
+
+}
+
+/* Landing Page */
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body {
+    min-width: 200px;
+}
+
+h1,h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#table {
+    background-color: white;
+}
