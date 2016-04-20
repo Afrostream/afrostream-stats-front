@@ -21,3 +21,12 @@ h1,h2 {
 #table {
     background-color: white;
 }
+
+#lblUsers {
+    display: block !important;
+    width:auto;
+    border-radius: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: black;
+}
