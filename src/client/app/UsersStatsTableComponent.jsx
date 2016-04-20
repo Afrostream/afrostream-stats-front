@@ -4,11 +4,15 @@
 import React from 'react'
 import {render} from 'react-dom'
 import Table from 'react-bootstrap/lib/Table'
+import Label from 'react-bootstrap/lib/Label'
 
 class StatsTableComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {data: []};
+        this.state = {
+            data: [],
+            usersCount: 0
+        };
     }
 
     loadStatsData() {
@@ -16,7 +20,10 @@ class StatsTableComponent extends React.Component {
             url: 'http://stats.adm.afrostream.net/api/getUsers',
             dataType: 'json',
             success: function(data) {
-                this.setState({data: data.users});
+                this.setState({
+                    data: data.users,
+                    usersCount: data.usersCount
+                });
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error('#GET Error', status, err.toString());
@@ -37,7 +44,10 @@ class StatsTableComponent extends React.Component {
     }
 
     render() {
+        console.log(this.state.usersCount);
         return (
+            <div>
+            <Label bsStyle="warning" id="lblUsers">Total Users: {this.state.usersCount}</Label>
             <Table striped bordered condensed hover responsive>
                 <thead>
                 <tr>
@@ -96,6 +106,7 @@ class StatsTableComponent extends React.Component {
                 }) }
                 </tbody>
             </Table>
+            </div>
         );
     }
 }
