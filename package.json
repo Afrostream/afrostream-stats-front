@@ -4,7 +4,7 @@
   "description": "Hello World in React",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cd src/client; tar cvfz /tmp/www.tar.gz index.html public/bundle.js static/*; scp /tmp/www.tar.gz root@stats.adm.afrostream.net:; ssh root@stats.adm.afrostream.net tar xvfz /root/www.tar.gz -C /home/ubuntu/Go/www; exit 0",
     "dev": "webpack -d --watch",
     "build": "webpack -p"
   },

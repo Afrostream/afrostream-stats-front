@@ -2,7 +2,7 @@
  * Created by admin on 02/04/2016.
  */
 import React from 'react'
-import ASNumberStatsTableComponent from './ASNumberStatsTableComponent.jsx'
+import CountriesAndOriginsStatsTableComponent from './CountriesAndOriginsStatsTableComponent.jsx'
 import NavbarComponent from './NavbarComponent.jsx'
 
 var sectionStyle = {
@@ -15,17 +15,17 @@ var signInStyle = {
     'marginLeft': '20px'
 };
 
-class ASNumberStatsPageComponent extends React.Component {
+class CountriesAndOriginsStatsPageComponent extends React.Component {
     render() {
         return(
             <div style={sectionStyle}>
                 <NavbarComponent />
                 <div id="table">
-                    <ASNumberStatsTableComponent pollInterval={ 1000 }/>
+                    <CountriesAndOriginsStatsTableComponent pollInterval={ 1000 }/>
                 </div>
             </div>
         );
     }
 }
 
-export default ASNumberStatsPageComponent;
+export default CountriesAndOriginsStatsPageComponent;
