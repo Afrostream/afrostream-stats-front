@@ -30,3 +30,7 @@ h1,h2 {
     font-size: 18px;
     color: black;
 }
+
+.table {
+    font-size: 0.8em;
+}
